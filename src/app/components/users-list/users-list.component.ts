@@ -22,4 +22,8 @@ export class UsersListComponent implements OnInit {
       this.usersService.users = users; // Заносим полученные данные в переменную users в UsersService
     });
   }
+
+  onDeleteUser(id:number): void {
+    this.usersService.deleteUser(id);
+  }
 }
