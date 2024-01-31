@@ -1,4 +1,7 @@
-<app-user-card
+<div class="user-list">
+  <app-user-card
   *ngFor="let user of usersService.users"
   [user]="user"
+  (deleteUserEvent)="onDeleteUser($event)"
   ></app-user-card>
+</div>
