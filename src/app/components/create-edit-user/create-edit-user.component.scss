@@ -1,0 +1,19 @@
+.modal-form {
+  width: 400px;
+  padding: 20px;
+}
+
+mat-form-field {
+  width: 100%; // Поля формы занимают всю доступную ширину
+  margin-bottom: 5px; // Добавляет нижний отступ между полями формы
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between; // Распределяет кнопки по обеим сторонам
+  margin-top: 20px; // Добавляет отступ сверху для группы кнопок
+}
+
+.mat-dialog-content {
+  padding: 0; // Убирает внутренние отступы в модальном окне, если они есть
+}
