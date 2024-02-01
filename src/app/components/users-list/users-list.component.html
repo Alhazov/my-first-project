@@ -1,7 +1,14 @@
+<div class="button-container">
+  <button mat-raised-button color="basic" routerLink="/">Назад</button>
+  <button mat-raised-button color="primary" (click)="openAddUserDialog()">Добавить пользователя</button>
+</div>
+
 <div class="user-list">
   <app-user-card
   *ngFor="let user of usersService.users"
   [user]="user"
   (deleteUserEvent)="onDeleteUser($event)"
-  ></app-user-card>
+  (editUser)="openEditUserDialog(user)"
+  >
+  </app-user-card>
 </div>

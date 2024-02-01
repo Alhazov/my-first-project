@@ -1,7 +1,7 @@
-<div *ngIf="user" class="user-card">
+<div *ngIf="user" (click)="onCardClick(user)" class="user-card">
   <h3>{{ user.name }}</h3>
   <p>Email: {{ user.email }}</p>
   <p>Phone: {{ user.phone }}</p>
   <p>Website: {{ user.website }}</p>
-  <button (click)="deleteUser()">Удалить</button>
+  <button mat-raised-button color="warn" (click)="deleteUser($event)">Удалить</button>
 </div>
