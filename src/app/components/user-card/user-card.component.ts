@@ -11,12 +11,21 @@ export class UserCardComponent {
   user!: User;
   @Output()
   deleteUserEvent = new EventEmitter<number>();
+  @Output()
+  editUser = new EventEmitter<User>();
 
   constructor() {
 
   }
 
-  deleteUser(): void {
+  deleteUser(event: Event): void {
+    event.stopPropagation();
     this.deleteUserEvent.emit(this.user.id);
   }
+
+  onCardClick(user: User): void {
+    this.editUser.emit(user);
+    // console.log("click")
+  }
+
 }
