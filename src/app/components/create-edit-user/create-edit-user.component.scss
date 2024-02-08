@@ -4,16 +4,16 @@
 }
 
 mat-form-field {
-  width: 100%; // Поля формы занимают всю доступную ширину
-  margin-bottom: 5px; // Добавляет нижний отступ между полями формы
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 .actions {
   display: flex;
-  justify-content: space-between; // Распределяет кнопки по обеим сторонам
-  margin-top: 20px; // Добавляет отступ сверху для группы кнопок
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .mat-dialog-content {
-  padding: 0; // Убирает внутренние отступы в модальном окне, если они есть
+  padding: 0;
 }

@@ -39,15 +39,14 @@ export class CreateEditUserComponent implements OnInit{
     if (this.userForm.valid) {
       const resultData = {
         ...this.userForm.value,
-        // id: this.data.user ? this.data.user.id : null,
         isEdit: this.isEdit
       };
 
       if (this.isEdit) {
-        resultData.id = this.data.user?.id ?? null; // Используем опциональную цепочку и условный оператор для добавления id
+        resultData.id = this.data.user?.id ?? null;
       }
 
-      this.dialogRef.close(resultData); // this.userForm.value
+      this.dialogRef.close(resultData);
     }
   }
 }

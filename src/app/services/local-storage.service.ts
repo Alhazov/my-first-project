@@ -14,7 +14,7 @@ export class LocalStorageService {
   getItem<T>(key: string): T | null {
     const item = this.storage.getItem(key);
     console.log(`Retrieving from localStorage: ${key}`, item)
-    return item ? JSON.parse(item) : null;
+    return item ? JSON.parse(item) : null; // попробовать try catch
   }
 
   constructor() { }

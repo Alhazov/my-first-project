@@ -23,10 +23,6 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit() {
 
-    // Метод getUsers() вызывается напрямую в ngOnInit компонента UsersListComponent, что приводит к загрузке данных с сервера каждый раз при инициализации компонента, даже если данные уже сохранены в localStorage.
-    // this.usersApiService.getUsers().subscribe((users: User[]) => {
-    //   this.usersService.users = users; // Заносим полученные данные в переменную users в UsersService
-    // });
   }
 
   onDeleteUser(id:number): void {
