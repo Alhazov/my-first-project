@@ -7,7 +7,7 @@ import { User } from '../../interfaces/user.interface';
   styleUrls: ['./user-card.component.scss']
 })
 export class UserCardComponent {
-  @Input()
+  @Input( {required: true} )
   user!: User;
   @Output()
   deleteUserEvent = new EventEmitter<number>();
