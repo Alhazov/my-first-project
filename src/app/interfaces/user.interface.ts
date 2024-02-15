@@ -1,23 +1,23 @@
 export interface User {
   id: number;
-  name: string | undefined;
-  username: string | undefined;
-  email: string | undefined;
+  name: string;
+  username: string;
+  email: string;
   address: {
-    street: string | undefined;
-    suite: string | undefined;
-    city: string | undefined;
-    zipcode: string | undefined;
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
     geo: {
-      lat: string | undefined;
-      lng: string | undefined;
+      lat: string;
+      lng: string;
     };
   };
-  phone: string | undefined;
-  website: string | undefined;
+  phone: string;
+  website: string;
   company: {
-    name: string | undefined;
-    catchPhrase: string | undefined;
-    bs: string | undefined;
+    name: string;
+    catchPhrase: string;
+    bs: string;
   };
 }

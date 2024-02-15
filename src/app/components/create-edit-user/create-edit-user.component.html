@@ -1,21 +1,31 @@
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="modal-form">
+<form
+  [formGroup]="userForm"
+  (ngSubmit)="onSubmit()"
+  class="modal-form"
+  >
   <h2>Добавить/Редактировать пользователя</h2>
   <mat-form-field appearance="fill">
     <mat-label>Имя</mat-label>
     <input matInput formControlName="name">
-    <mat-error *ngIf="userForm.controls['name'].errors?.['required'] && userForm.controls['name'].touched">
-      Имя обязательно.
+    <mat-error
+      *ngIf="userForm.controls['name'].errors?.['required'] && userForm.controls['name'].touched"
+    >
+      Имя обязательно
     </mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Электронная почта</mat-label>
     <input matInput formControlName="email">
-    <mat-error *ngIf="userForm.controls['email'].errors?.['required'] && userForm.controls['email'].touched">
-      Электронная почта обязательна.
+    <mat-error
+      *ngIf="userForm.controls['email'].errors?.['required'] && userForm.controls['email'].touched"
+    >
+      Электронная почта обязательна
     </mat-error>
-    <mat-error *ngIf="userForm.controls['email'].errors?.['email'] && userForm.controls['email'].touched">
-      Неправильный формат электронной почты.
+    <mat-error
+      *ngIf="userForm.controls['email'].errors?.['email'] && userForm.controls['email'].touched"
+    >
+      Неправильный формат электронной почты
     </mat-error>
   </mat-form-field>
 
@@ -30,8 +40,19 @@
   </mat-form-field>
 
   <div class="actions">
-    <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid">{{ isEdit ? 'Сохранить' : 'Создать' }}</button>
-    <button mat-button (click)="dialogRef.close()">Отмена</button>
+    <button
+      mat-raised-button color="primary"
+      type="submit"
+      [disabled]="!userForm.valid"
+    >
+      {{ isEdit ? 'Сохранить' : 'Создать' }}
+    </button>
+    <button
+      mat-button
+      (click)="dialogRef.close()"
+    >
+      Отмена
+    </button>
   </div>
 
 </form>

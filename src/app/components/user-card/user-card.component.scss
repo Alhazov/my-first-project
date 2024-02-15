@@ -7,9 +7,9 @@
 }
 
 mat-card-header {
-  display: flex; /* Это уже установлено по умолчанию, но удостоверьтесь в его наличии */
-  justify-content: center; /* Выравнивает содержимое по центру */
-  flex-direction: column; /* Ориентирует заголовок и подзаголовок вертикально */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 mat-card-title {
@@ -30,8 +30,6 @@ mat-card-content p {
     margin-bottom: 5px;
 }
 
-mat-card-actions {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
+.user-card .card-actions button {
+  margin: 0 5px;
 }
