@@ -5,10 +5,10 @@
 
 <div class="user-list">
   <app-user-card
-  *ngFor="let user of usersService.users"
-  [user]="user"
-  (deleteUserEvent)="onDeleteUser($event)"
-  (editUser)="openEditUserDialog(user)"
+    *ngFor="let user of users$ | async"
+    [user]="user"
+    (deleteUserEvent)="onDeleteUser($event)"
+    (editUserEvent)="openEditUserDialog($event)"
   >
   </app-user-card>
 </div>

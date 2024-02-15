@@ -41,11 +41,9 @@ export class CreateEditUserComponent implements OnInit{
         ...this.userForm.value,
         isEdit: this.isEdit
       };
-
       if (this.isEdit) {
         resultData.id = this.data.user?.id ?? null;
       }
-
       this.dialogRef.close(resultData);
     }
   }
