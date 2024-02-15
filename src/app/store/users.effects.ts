@@ -33,8 +33,6 @@ export class UsersEffects {
     })
   ));
 
-
-
   deleteUser$ = createEffect(() => this.actions$.pipe(
     ofType(UsersPageActions.deleteUser),
     switchMap(({ userId }) => {
