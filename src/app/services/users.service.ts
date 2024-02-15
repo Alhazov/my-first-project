@@ -40,12 +40,33 @@ export class UsersService {
   }
 
   addUser(newUser: User): Observable<User> {
-    const id = this.users.length > 0 ? Math.max(...this.users.map(user => user.id)) + 1 : 1;
-    newUser.id = id;
-    this.users.push(newUser);
-    this.localStorageService.setItem(this.usersKey, this.users);
-    return of(newUser)
-  }
+    let maxUserId = Math.max(...this.users.map(user => user.id), 0);
+    const user: User = {
+        id: ++maxUserId,
+        name: newUser?.name,
+        username: newUser?.username,
+        email: newUser?.email,
+        address: {
+            street: newUser?.address?.street,
+            suite: "",
+            city: "",
+            zipcode: "",
+            geo: {
+                lat: "",
+                lng: "",
+            },
+        },
+        phone: newUser?.phone,
+        website: newUser?.website,
+        company: {
+            name: newUser?.company?.name,
+            catchPhrase: "",
+            bs: "",
+        }
+    }
+    this.users = [...this.users, user];
+    return of(user);
+}
 
   editUser(update: Update<User>): Observable<User>  {
     const index = this.users.findIndex(user => user.id === update.id);
